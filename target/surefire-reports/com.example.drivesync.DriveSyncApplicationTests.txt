@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.example.drivesync.DriveSyncApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.951 s <<< FAILURE! - in com.example.drivesync.DriveSyncApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springdoc.ui.SwaggerConfig': Unsatisfied dependency expressed through field 'swaggerIndexTransformer'; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'org.springdoc.ui.SwaggerConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springdoc.ui.SwaggerConfig': Unsatisfied dependency expressed through field 'swaggerIndexTransformer'; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'org.springdoc.ui.SwaggerConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+Caused by: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'org.springdoc.ui.SwaggerConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+
